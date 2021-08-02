@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>unisaapplication</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>EmployeeRegistrationServlet</servlet-name>
+		<servlet-class>za.ac.unisa.controllers.EmployeeRegistrationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeRegistrationServlet</servlet-name>
+		<url-pattern>/registerEmployee</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>za.ac.unisa.controllers.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/employeeLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>StudentRegistrationServlet</servlet-name>
+		<servlet-class>za.ac.unisa.controllers.StudentRegistrationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentRegistrationServlet</servlet-name>
+		<url-pattern>/registerStudent</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>StudentServlet</servlet-name>
+		<servlet-class>za.ac.unisa.controllers.StudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentServlet</servlet-name>
+		<url-pattern>/students</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>SearchStudentServlet</servlet-name>
+	<servlet-class>za.ac.unisa.controllers.SearchStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>SearchStudentServlet</servlet-name>
+	<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+</web-app>
