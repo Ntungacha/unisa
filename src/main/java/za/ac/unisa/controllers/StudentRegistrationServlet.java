@@ -11,19 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import za.ac.unisa.models.Student;
-import za.ac.unisa.models.User;
 import za.ac.unisa.services.StudentService;
-import za.ac.unisa.services.UserService;
 
 @WebServlet("/StudentRegistrationServlet")
 public class StudentRegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final UserService userService = new UserService();
 	private final StudentService studentService = new StudentService();
 
 	public StudentRegistrationServlet() {
 		super();
-
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -43,15 +39,10 @@ public class StudentRegistrationServlet extends HttpServlet {
 		LocalDate date = LocalDate.parse(dateOfBirth);
 		String idNum = request.getParameter("idNumber");
 		long idNumber = Long.parseLong(idNum);
-		String userName = request.getParameter("userName");
-		String password = request.getParameter("password");
-		String role = request.getParameter("role");
 		String course = request.getParameter("course");
-		User user = new User(userName, password, role);
 		Student student = new Student(surname, lastName, emailAddress, telePhoneNumber, sex, maritalStatus, date,
 				idNumber, course);
 		try {
-			user = userService.getUser(user);
 			int registerStudent = studentService.registerStudent(student);
 			System.out.println(registerStudent);
 			StudentService studentService = new StudentService();
@@ -59,9 +50,8 @@ public class StudentRegistrationServlet extends HttpServlet {
 			System.out.print(students);
 			request.setAttribute("students", students);
 			request.getRequestDispatcher("/registrationSuccessfull.jsp").forward(request, response);
-		
+
 		} catch (ServletException | IOException e) {
-			// e.printStackTrace();
 			System.out.println(e);
 		}
 

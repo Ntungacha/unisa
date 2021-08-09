@@ -29,9 +29,11 @@ public class SearchStudentServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String search = request.getParameter("search");
+		String option = request.getParameter("option");
 		try {
-			String search = request.getParameter("search");
-			List<Student> students = studentService.searchStudent(search);
+			List<Student> students = studentService.search(option, search);
+			// List<Student> students = studentService.searchStudent(search);
 			System.out.println(students);
 			request.setAttribute("students", students);
 			request.getRequestDispatcher("/registrationSuccessfull.jsp").forward(request, response);

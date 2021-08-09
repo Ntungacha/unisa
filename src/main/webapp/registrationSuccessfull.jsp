@@ -17,21 +17,23 @@
 	<br>
 	<br>
 	<form action="search" method="post">
-		<label>Search:</label> <input type="search" name="search"> <input
-			type="submit" value="search"> <label for="option">option:</label>
+	<label for="option">option:</label>
 		<select name="option" id="option">
 			<option value=""></option>
-			<option value="search">studentId</option>
+			<option value="student_id">student Id</option>
 			<option value="surname">surname</option>
-			<option value="last name">last name</option>
-			<option value="telephone number">TELEPHONE NUMBER</option>
-			<option value="emailAddress">email address</option>
-			<option value="dateOfBirth">Date of Birth</option>
+			<option value="last_Name">last name</option>
+			<option value="telephone_Number">TELEPHONE NUMBER</option>
+			<option value="email_Address">email address</option>
+			<option value="date_Of_Birth">Date of Birth</option>
 			<option value="course">course</option>
-			<option value="maritalStatus">MARITAL STATUS</option>
+			<option value="marital_Status">MARITAL STATUS</option>
 			<option value="sex">Sex</option>
 		</select>
+		<label>Search:</label> <input type="search" name="search"> <input
+			type="submit" value="search"> 
 	</form>
+	
 	<a href="registerStudent.jsp"><button>Create</button> </a>
 	<a href="index.jsp"><button>LogOut</button> </a>
 	<br>
@@ -39,7 +41,7 @@
 	<table border="1">
 		<thead>
 			<tr>
-				<th>FIRST NAME</th>
+				<th>SURNAME</th>
 				<th>LAST NAME</th>
 				<th>TELEPHONE NUMBER</th>
 				<th>EMAIL ADDRESS</th>

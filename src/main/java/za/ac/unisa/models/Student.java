@@ -24,7 +24,7 @@ public class Student extends Person {
 		return "Student [course=" + course + ", getSurname()=" + getSurname() + ", getLastName()=" + getLastName()
 				+ ", getEmailAddress()=" + getEmailAddress() + ", getTelePhoneNumber()=" + getTelePhoneNumber()
 				+ ", getSex()=" + getSex() + ", getMaritalStatus()=" + getMaritalStatus() + ", getDateOfBirth()="
-				+ getDateOfBirth() + ", getIdNumber()=" + getIdNumber() + ", getUser()=" + getUser() + "]";
+				+ getDateOfBirth() + ", getIdNumber()=" + getIdNumber()+ "]";
 	}
 	
 	
